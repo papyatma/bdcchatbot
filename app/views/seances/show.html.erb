@@ -62,17 +62,17 @@
 
 <p>
   <strong>place:</strong>
-  <%= @seance.place_id %>
+  <%= @seance.place.name %>
 </p>
 
 <p>
   <strong>Activité:</strong>
-  <%= @seance.activite_id %>
+  <%= @seance.activite.nom %>
 </p>
 
 <p>
   <strong>Structure:</strong>
-  <%= @seance.structure_id %>
+  <%= @seance.structure.name %>
 </p>
 
 <%= link_to 'Edit', edit_seance_path(@seance) %> |

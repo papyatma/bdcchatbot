@@ -39,9 +39,9 @@
         <td><%= seance.dateDebut %></td>
         <td><%= seance.dateFin %></td>
         <td><%= seance.tarif %></td>
-        <td><%= seance.place_id %></td>
-        <td><%= seance.activite_id%></td>
-        <td><%= seance.structure_id %></td>
+        <td><%= seance.place.name %></td>
+        <td><%= seance.activite.nom%></td>
+        <td><%= seance.structure.name %></td>
         <td><%= link_to 'Show', seance %></td>
         <td><%= link_to 'Edit', edit_seance_path(seance) %></td>
         <td><%= link_to 'Destroy', seance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
