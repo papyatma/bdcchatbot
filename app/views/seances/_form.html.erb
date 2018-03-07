@@ -1,0 +1,92 @@
+<%= form_with(model: seance, local: true) do |form| %>
+  <% if seance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(seance.errors.count, "error") %> prohibited this seance from being saved:</h2>
+
+      <ul>
+      <% seance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :public %>
+    <%= form.text_field :public, id: :seance_public %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ageMin %>
+    <%= form.number_field :ageMin, id: :seance_ageMin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ageMax %>
+    <%= form.number_field :ageMax, id: :seance_ageMax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :niveau %>
+    <%= form.text_field :niveau, id: :seance_niveau %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sexe %>
+    <%= form.number_field :sexe, id: :seance_sexe %>
+  </div>
+
+  <div class="field">
+    <%= form.label :periode %>
+    <%= form.text_field :periode, id: :seance_periode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jour %>
+    <%= form.text_field :jour, id: :seance_jour %>
+  </div>
+
+  <div class="field">
+    <%= form.label :heureDebut %>
+    <%= form.time_select :heureDebut, id: :seance_heureDebut %>
+  </div>
+
+  <div class="field">
+    <%= form.label :heureFin %>
+    <%= form.time_select :heureFin, id: :seance_heureFin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dateDebut %>
+    <%= form.date_select :dateDebut, id: :seance_dateDebut %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dateFin %>
+    <%= form.date_select :dateFin, id: :seance_dateFin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tarif %>
+    <%= form.text_field :tarif, id: :seance_tarif %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Place %>
+    <%= form.select :place_id, Place.all.collect { |pl| [ pl.name, pl.id ] }, include_blank: false %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Activite %>
+    <%= form.select :activite_id, Activite.all.collect { |a| [ a.nom, a.id ] }, include_blank: false %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Structure %>
+    <%= form.select :structure_id, Structure.all.collect { |s| [ s.name, s.id ] }, include_blank: false %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

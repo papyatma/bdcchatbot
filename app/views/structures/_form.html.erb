@@ -1,0 +1,51 @@
+<%= form_with(model: structure, local: true) do |form| %>
+  <% if structure.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(structure.errors.count, "error") %> prohibited this structure from being saved:</h2>
+
+      <ul>
+      <% structure.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :structure_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :structure_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zipcode %>
+    <%= form.number_field :zipcode, id: :structure_zipcode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.number_field :phone, id: :structure_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :structure_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :typeStructure %>
+    <%= form.text_field :typeStructure, id: :structure_typeStructure %>
+  </div>
+  <div class="field">
+    <%= form.label :Direction %>
+    <%= form.select :direction_id, Direction.all.collect { |d| [ d.name, d.id ] }, include_blank: false %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

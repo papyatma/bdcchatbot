@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  public: MyString
+  ageMin: 1
+  ageMax: 1
+  niveau: MyString
+  sexe: 1
+  periode: MyString
+  jour: MyString
+  heureDebut: 2018-03-06 10:26:21
+  heureFin: 2018-03-06 10:26:21
+  dateDebut: 2018-03-06
+  dateFin: 2018-03-06
+  tarif: MyString
+
+two:
+  public: MyString
+  ageMin: 1
+  ageMax: 1
+  niveau: MyString
+  sexe: 1
+  periode: MyString
+  jour: MyString
+  heureDebut: 2018-03-06 10:26:21
+  heureFin: 2018-03-06 10:26:21
+  dateDebut: 2018-03-06
+  dateFin: 2018-03-06
+  tarif: MyString

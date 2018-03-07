@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Public:</strong>
+  <%= @seance.public %>
+</p>
+
+<p>
+  <strong>Agemin:</strong>
+  <%= @seance.ageMin %>
+</p>
+
+<p>
+  <strong>Agemax:</strong>
+  <%= @seance.ageMax %>
+</p>
+
+<p>
+  <strong>Niveau:</strong>
+  <%= @seance.niveau %>
+</p>
+
+<p>
+  <strong>Sexe:</strong>
+  <%= @seance.sexe %>
+</p>
+
+<p>
+  <strong>Periode:</strong>
+  <%= @seance.periode %>
+</p>
+
+<p>
+  <strong>Jour:</strong>
+  <%= @seance.jour %>
+</p>
+
+<p>
+  <strong>Heuredebut:</strong>
+  <%= @seance.heureDebut %>
+</p>
+
+<p>
+  <strong>Heurefin:</strong>
+  <%= @seance.heureFin %>
+</p>
+
+<p>
+  <strong>Datedebut:</strong>
+  <%= @seance.dateDebut %>
+</p>
+
+<p>
+  <strong>Datefin:</strong>
+  <%= @seance.dateFin %>
+</p>
+
+<p>
+  <strong>Tarif:</strong>
+  <%= @seance.tarif %>
+</p>
+
+<p>
+  <strong>place:</strong>
+  <%= @seance.place_id %>
+</p>
+
+<p>
+  <strong>Activité:</strong>
+  <%= @seance.activite_id %>
+</p>
+
+<p>
+  <strong>Structure:</strong>
+  <%= @seance.structure_id %>
+</p>
+
+<%= link_to 'Edit', edit_seance_path(@seance) %> |
+<%= link_to 'Back', seances_path %>
