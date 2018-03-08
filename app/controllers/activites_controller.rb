@@ -1,5 +1,6 @@
 class ActivitesController < ApplicationController
   before_action :set_activite, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /activites
   # GET /activites.json

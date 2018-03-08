@@ -37,6 +37,8 @@ gem 'simple_form'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'sass-rails', '~> 5.0'
 gem 'jquery-rails'
+gem 'devise'
+gem 'devise-bootstrap-views'
 #Désactivation des Warning
 ENV['RUBY_DEP_GEM_SILENCE_WARNINGS'] = '1'
 

@@ -1,5 +1,6 @@
 class SeancesController < ApplicationController
   before_action :set_seance, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /seances
   # GET /seances.json
