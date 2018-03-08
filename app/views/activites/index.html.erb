@@ -2,7 +2,7 @@
 
 <h1>Activites</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Nom</th>
@@ -14,9 +14,9 @@
     <% @activites.each do |activite| %>
       <tr>
         <td><%= activite.nom %></td>
-        <td><%= link_to 'Show', activite %></td>
-        <td><%= link_to 'Edit', edit_activite_path(activite) %></td>
-        <td><%= link_to 'Destroy', activite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', activite, class:"badge badge-primary" %></td>
+        <td><%= link_to 'Edit', edit_activite_path(activite), class:"badge badge-primary" %></td>
+        <td><%= link_to 'Destroy', activite, method: :delete, data: { confirm: 'Are you sure?' }, class:"badge badge-primary" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Activite', new_activite_path %>
+<%= link_to 'New Activite', new_activite_path, class:"badge badge-primary" %>

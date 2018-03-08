@@ -2,7 +2,7 @@
 
 <h1>Directions</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= direction.name %></td>
         <td><%= direction.typeOffer %></td>
-        <td><%= link_to 'Show', direction %></td>
-        <td><%= link_to 'Edit', edit_direction_path(direction) %></td>
-        <td><%= link_to 'Destroy', direction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', direction, class:"badge badge-primary" %></td>
+        <td><%= link_to 'Edit', edit_direction_path(direction), class:"badge badge-primary" %></td>
+        <td><%= link_to 'Destroy', direction, method: :delete, data: { confirm: 'Are you sure?' }, class:"badge badge-primary" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Direction', new_direction_path %>
+<%= link_to 'New Direction', new_direction_path,class:"badge badge-primary" %>

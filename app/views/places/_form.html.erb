@@ -11,12 +11,12 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :place_name %>
+    <%= form.text_field :name, id: :place_name, class:"form-control" %>
   </div>
 
-  <div class="actions">
+  <div class="btn btn-primary">
     <%= form.submit %>
   </div>
 <% end %>

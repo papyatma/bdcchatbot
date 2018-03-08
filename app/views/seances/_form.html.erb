@@ -11,82 +11,82 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :public %>
-    <%= form.text_field :public, id: :seance_public %>
+    <%= form.text_field :public, id: :seance_public, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :ageMin %>
-    <%= form.number_field :ageMin, id: :seance_ageMin %>
+    <%= form.number_field :ageMin, id: :seance_ageMin, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :ageMax %>
-    <%= form.number_field :ageMax, id: :seance_ageMax %>
+    <%= form.number_field :ageMax, id: :seance_ageMax, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :niveau %>
-    <%= form.text_field :niveau, id: :seance_niveau %>
+    <%= form.text_field :niveau, id: :seance_niveau, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :sexe %>
-    <%= form.number_field :sexe, id: :seance_sexe %>
+    <%= form.number_field :sexe, id: :seance_sexe, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :periode %>
-    <%= form.text_field :periode, id: :seance_periode %>
+    <%= form.text_field :periode, id: :seance_periode, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :jour %>
-    <%= form.text_field :jour, id: :seance_jour %>
+    <%= form.text_field :jour, id: :seance_jour, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :heureDebut %>
-    <%= form.time_select :heureDebut, id: :seance_heureDebut %>
+    <%= form.time_select :heureDebut, id: :seance_heureDebut, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :heureFin %>
-    <%= form.time_select :heureFin, id: :seance_heureFin %>
+    <%= form.time_select :heureFin, id: :seance_heureFin, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :dateDebut %>
-    <%= form.date_select :dateDebut, id: :seance_dateDebut %>
+    <%= form.date_select :dateDebut, id: :seance_dateDebut, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :dateFin %>
-    <%= form.date_select :dateFin, id: :seance_dateFin %>
+    <%= form.date_select :dateFin, id: :seance_dateFin, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :tarif %>
-    <%= form.text_field :tarif, id: :seance_tarif %>
+    <%= form.text_field :tarif, id: :seance_tarif, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :Place %>
-    <%= form.select :place_id, Place.all.collect { |pl| [ pl.name, pl.id ] }, include_blank: false %>
+    <%= form.select :place_id, Place.all.collect { |pl| [ pl.name, pl.id ] }, include_blank: false, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :Activite %>
-    <%= form.select :activite_id, Activite.all.collect { |a| [ a.nom, a.id ] }, include_blank: false %>
+    <%= form.select :activite_id, Activite.all.collect { |a| [ a.nom, a.id ] }, include_blank: false, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :Structure %>
-    <%= form.select :structure_id, Structure.all.collect { |s| [ s.name, s.id ] }, include_blank: false %>
+    <%= form.select :structure_id, Structure.all.collect { |s| [ s.name, s.id ] }, include_blank: false, class:"form-control" %>
   </div>
 
-  <div class="actions">
+  <div class="btn btn-primary">
     <%= form.submit %>
   </div>
 <% end %>

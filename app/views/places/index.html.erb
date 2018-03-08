@@ -2,7 +2,7 @@
 
 <h1>Places</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -14,9 +14,9 @@
     <% @places.each do |place| %>
       <tr>
         <td><%= place.name %></td>
-        <td><%= link_to 'Show', place %></td>
-        <td><%= link_to 'Edit', edit_place_path(place) %></td>
-        <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', place, class:"badge badge-primary" %></td>
+        <td><%= link_to 'Edit', edit_place_path(place), class:"badge badge-primary" %></td>
+        <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' }, class:"badge badge-primary" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Place', new_place_path %>
+<%= link_to 'New Place', new_place_path, class:"badge badge-primary" %>

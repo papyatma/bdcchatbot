@@ -4,23 +4,26 @@
     <title><%= @titre %></title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
-    <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
-    <%= stylesheet_link_tag 'custom', :media => 'screen' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <div class="container">
       <header>
-        <%= image_tag("logo.png", :alt => "Application Exemple", :class => "round") %>
-        <nav class="round">
-          <ul>
-            <li><%= link_to "Home", root_path %></li>
+        <nav>
+          <ul class="nav nav-pills nav-fil">
+            <li><%= link_to "Home", root_path, class:"nav-link"%></li>
+            <li><%= link_to "Structure", structures_path, class:"nav-link" %></li>
+            <li><%= link_to "Direction", directions_path, class:"nav-link" %></li>
+            <li><%= link_to "Place", places_path, class:"nav-link" %></li>
+            <li><%= link_to "Activite", activites_path, class:"nav-link" %></li>
+            <li><%= link_to "Seances", seances_path, class:"nav-link" %></li>
           </ul>
         </nav>
       </header>
-      <section class="round">
+      <section>
         <%= yield %>
       </section>
     </div>

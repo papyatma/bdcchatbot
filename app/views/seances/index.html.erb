@@ -2,7 +2,7 @@
 
 <h1>Seances</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Public</th>
@@ -42,9 +42,9 @@
         <td><%= seance.place.name %></td>
         <td><%= seance.activite.nom%></td>
         <td><%= seance.structure.name %></td>
-        <td><%= link_to 'Show', seance %></td>
-        <td><%= link_to 'Edit', edit_seance_path(seance) %></td>
-        <td><%= link_to 'Destroy', seance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', seance, class:"badge badge-primary" %></td>
+        <td><%= link_to 'Edit', edit_seance_path(seance), class:"badge badge-primary" %></td>
+        <td><%= link_to 'Destroy', seance, method: :delete, data: { confirm: 'Are you sure?' }, class:"badge badge-primary" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -52,4 +52,4 @@
 
 <br>
 
-<%= link_to 'New Seance', new_seance_path %>
+<%= link_to 'New Seance', new_seance_path, class:"badge badge-primary" %>

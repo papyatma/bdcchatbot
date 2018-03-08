@@ -2,7 +2,7 @@
 
 <h1>Structures</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -26,9 +26,9 @@
         <td><%= structure.email %></td>
         <td><%= structure.typeStructure %></td>
         <td><%= structure.direction.name %></td>
-        <td><%= link_to 'Show', structure %></td>
-        <td><%= link_to 'Edit', edit_structure_path(structure) %></td>
-        <td><%= link_to 'Destroy', structure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', structure, class:"badge badge-primary" %></td>
+        <td><%= link_to 'Edit', edit_structure_path(structure), class:"badge badge-primary" %></td>
+        <td><%= link_to 'Destroy', structure, method: :delete, data: { confirm: 'Are you sure?' },class:"badge badge-primary" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Structure', new_structure_path %>
+<%= link_to 'New Structure', new_structure_path, class:"badge badge-primary" %>
