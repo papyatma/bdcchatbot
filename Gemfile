@@ -39,6 +39,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'jquery-rails'
 gem 'devise'
 gem 'devise-bootstrap-views'
+gem 'will_paginate', '~> 3.1.0'
+gem 'bootstrap-will_paginate'
 #Désactivation des Warning
 ENV['RUBY_DEP_GEM_SILENCE_WARNINGS'] = '1'
 

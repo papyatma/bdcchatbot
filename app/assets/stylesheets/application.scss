@@ -13,3 +13,12 @@
  *= require devise_bootstrap_views
  */
  @import "bootstrap";
+
+.container{
+  background-color: #F0FADE;
+  margin:10px 10px;
+  padding:10px 10px;
+}
+.navbar-text{
+  margin-top: 5px !important;
+}

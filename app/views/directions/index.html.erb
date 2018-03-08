@@ -23,7 +23,7 @@
     <% end %>
   </tbody>
 </table>
-
+  <%= will_paginate(@directions, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'pagination-lg') %>
 <br>
 
 <%= link_to 'New Direction', new_direction_path,class:"badge badge-primary" %>

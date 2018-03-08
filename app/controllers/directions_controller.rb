@@ -6,6 +6,7 @@ class DirectionsController < ApplicationController
   # GET /directions.json
   def index
     @directions = Direction.all
+    @directions = Direction.paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /directions/1

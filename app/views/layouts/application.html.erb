@@ -14,17 +14,19 @@
   <body>
     <div class="container">
       <header>
-        <p class="navbar-text pull-right">
-            <% if user_signed_in? %>
-              Bienvenue <strong><%= current_user.email %></strong>.
-              <%= link_to 'Modifier profil', edit_user_registration_path, :class => 'navbar-link' %> |
-              <%= link_to "Déconnection", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-            <% else %>
-              <%= link_to "Inscription", new_user_registration_path, :class => 'navbar-link'  %> |
-              <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-            <% end %>
-        </p>
+        <h1>Base de connaissances Chatbot</h1>
+
         <nav>
+          <p class="navbar-text pull-right">
+              <% if user_signed_in? %>
+                Bienvenue <strong><%= current_user.email %></strong>.
+                <%= link_to 'Modifier profil', edit_user_registration_path, :class => 'navbar-link' %> |
+                <%= link_to "Déconnection", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+              <% else %>
+                <%= link_to "Inscription", new_user_registration_path, :class => 'navbar-link'  %> |
+                <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+              <% end %>
+          </p>
           <ul class="nav nav-pills nav-fil">
             <li><%= link_to "Home", root_path, class:"nav-link"%></li>
             <li><%= link_to "Structure", structures_path, class:"nav-link" %></li>
